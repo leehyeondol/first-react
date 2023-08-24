@@ -13,7 +13,7 @@ let auth = (req, res, next) => {
 
         // console.log('userh', user)
 
-        req.token = token;
+        req.token = token;//리퀘스트에 토큰이랑 유저를 줘야, index.js에서 호출한 함수가 토큰이랑 유저를 사용할 수 있음
         req.user = user;
         next();
     })
